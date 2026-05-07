@@ -8,8 +8,19 @@ export default function Footer() {
   const tServices = useTranslations('ServicesPage.Items');
 
   return (
-    <footer className="bg-[var(--color-stone-warm)] pt-24 pb-12 mt-auto border-t border-black/5">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer className="bg-[var(--color-stone-warm)] pt-24 pb-12 mt-auto border-t border-black/5 relative overflow-hidden">
+      {/* Decorative Branded Watermark */}
+      <div className="absolute -bottom-5 -right-10 opacity-[0.03] pointer-events-none select-none dark:opacity-[0.07]">
+        <Image 
+          src="/images/orbital-tooth.png"
+          alt=""
+          width={450}
+          height={450}
+          className="logo-invert"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2 group inline-flex">
@@ -18,7 +29,7 @@ export default function Footer() {
                   src="/images/dentalist-logo.png"
                   alt="Dentalist Clinic Logo"
                   fill
-                  className="object-contain dark:invert"
+                  className="object-contain logo-invert"
                 />
               </div>
               <span className="font-display font-semibold text-xl tracking-[0.15em] text-[var(--color-charcoal)] leading-none">
@@ -93,10 +104,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-black/5 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-black/5 flex flex-col md:flex-row items-center justify-between gap-8">
           <p className="text-xs text-[var(--color-charcoal-muted)]">
             &copy; {new Date().getFullYear()} {t('Rights')}
           </p>
+          
           <div className="flex gap-4">
             {['Instagram', 'Facebook', 'Twitter'].map((social) => (
               <a key={social} href={social === 'Instagram' ? "https://www.instagram.com/dr_aouetta_med/" : "#"} aria-label={social} target={social === 'Instagram' ? "_blank" : undefined} rel={social === 'Instagram' ? "noopener noreferrer" : undefined} className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center text-[var(--color-charcoal-muted)] hover:bg-[var(--color-gold)] hover:text-white hover:border-transparent transition-all duration-300">

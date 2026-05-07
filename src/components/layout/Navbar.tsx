@@ -64,7 +64,7 @@ export default function Navbar() {
                 src="/images/dentalist-logo.png"
                 alt="Dentalist Clinic Logo"
                 fill
-                className="object-contain dark:invert"
+                className="object-contain logo-invert"
               />
             </div>
             <div className="flex flex-col">
