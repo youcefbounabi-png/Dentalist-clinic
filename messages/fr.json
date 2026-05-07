@@ -126,7 +126,8 @@
     "Hero": {
       "Subtitle": "Notre Offre",
       "Title": "Services Dentaires Premium",
-      "Description": "Chaque traitement à la Clinique Dentalist est réalisé avec un niveau de soin et de précision inégalé. Voici comment nous pouvons aider à transformer votre sourire."
+      "Description": "Chaque traitement à la Clinique Dentalist est réalisé avec un niveau de soin et de précision inégalé. Voici comment nous pouvons aider à transformer votre sourire.",
+      "BookBtn": "Réserver ce Service"
     },
     "Items": {
       "veneers": {
@@ -207,7 +208,7 @@
     "Hero": {
       "Subtitle": "Notre Héritage",
       "Title": "Redéfinir les Soins Dentaires",
-      "Description": "Fondée par le Dr Aouetta Med Saleh, la Clinique Dentalist est le lieu où l'excellence clinique rencontre la vision artistique. Nous ne traitons pas seulement les dents ; nous transformons des vies."
+      "Description": "Fondée par le Dr Aouetta Med Saleh, la Clinique Dentalist est le lieu où l'excellence clinique rencontre la vision artistique. Nous ne traitons pas seulement les dents ; nous transformons des lives."
     },
     "Stats": {
       "Exp": "Années d'Expérience",
