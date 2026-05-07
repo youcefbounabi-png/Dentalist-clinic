@@ -129,6 +129,7 @@
       "Description": "Every treatment at Dentalist Clinic is performed with an unmatched level of care and precision. Here's how we can help transform your smile.",
       "BookBtn": "Book this Service"
     },
+    "BookBtn": "Book this Service",
     "Items": {
       "veneers": {
         "title": "Porcelain Veneers",
