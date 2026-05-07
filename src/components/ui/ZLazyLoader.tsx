@@ -27,9 +27,12 @@ export default function ZLazyLoader({ onAnimationComplete, onZoomStart }: ZLazyL
         <motion.div
           key="loader"
           className="fixed inset-0 z-[9999] flex items-center justify-center bg-[var(--background)] overflow-hidden"
-          style={{ pointerEvents: startOutro ? 'none' : 'auto' }}
+          style={{ 
+            pointerEvents: startOutro ? 'none' : 'auto',
+            willChange: 'opacity'
+          }}
           animate={startOutro ? { opacity: 0 } : { opacity: 1 }}
-          transition={{ duration: 1.2, ease: [0.33, 1, 0.68, 1] }}
+          transition={{ duration: 0.8, ease: 'easeInOut' }}
           onAnimationComplete={() => {
             if (startOutro) {
               setZoomDone(true);
@@ -39,70 +42,47 @@ export default function ZLazyLoader({ onAnimationComplete, onZoomStart }: ZLazyL
         >
           {/* Subtle cinematic ambient glow */}
           <motion.div
-            className="absolute inset-0 pointer-events-none mix-blend-screen"
+            className="absolute inset-0 pointer-events-none"
             style={{
-              background: 'radial-gradient(circle at 50% 50%, rgba(202,138,4,0.08) 0%, transparent 60%)',
+              background: 'radial-gradient(circle at 50% 50%, rgba(202,138,4,0.05) 0%, transparent 70%)',
             }}
-            animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
-            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+            animate={{ opacity: [0.3, 0.5, 0.3] }}
+            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
           />
 
           {/* ── The 3D Orbital Scene ── */}
           <motion.div
-            className="relative w-64 h-64 flex items-center justify-center perspective-[1000px]"
+            className="relative w-48 h-48 flex items-center justify-center"
+            style={{ willChange: 'transform, opacity' }}
             animate={
               startOutro
-                ? { scale: 15, opacity: 0, filter: 'blur(10px)' }
-                : { scale: 1, opacity: 1, filter: 'blur(0px)' }
+                ? { scale: 8, opacity: 0 }
+                : { scale: 1, opacity: 1 }
             }
             transition={
               startOutro
-                ? { duration: 1.2, ease: [0.5, 0, 0, 1] }
-                : { duration: 1.5, ease: 'easeOut' }
+                ? { duration: 1, ease: [0.4, 0, 0.2, 1] }
+                : { duration: 1, ease: 'easeOut' }
             }
           >
-            {/* Central Part of the Logo (Static) */}
+            {/* Logo Image */}
             <motion.div 
-              className="absolute inset-0 z-20 flex items-center justify-center drop-shadow-[0_0_15px_rgba(202,138,4,0.3)]"
-              initial={{ opacity: 0, scale: 0.8 }}
+              className="absolute inset-0 z-20 flex items-center justify-center"
+              initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.5, ease: 'easeOut' }}
+              transition={{ duration: 1, ease: 'easeOut' }}
             >
               <img 
                 src="/images/dentalist-logo.png" 
-                alt="Dentalist Logo Center" 
+                alt="Dentalist Logo" 
                 className="w-full h-full object-contain dark:invert"
-                style={{
-                  // Keep only the central part (the tooth/D)
-                  maskImage: 'radial-gradient(circle at 50% 50%, black 45%, transparent 48%)',
-                  WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 45%, transparent 48%)'
-                }}
-              />
-            </motion.div>
-
-            {/* Outer Part of the Logo (The Ring - Rotating) */}
-            <motion.div
-              className="absolute inset-0 z-10"
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
-            >
-              <img 
-                src="/images/dentalist-logo.png" 
-                alt="Dentalist Logo Ring" 
-                className="w-full h-full object-contain dark:invert"
-                style={{
-                  // Keep only the outer part (the ring)
-                  maskImage: 'radial-gradient(circle at 50% 50%, transparent 45%, black 48%)',
-                  WebkitMaskImage: 'radial-gradient(circle at 50% 50%, transparent 45%, black 48%)'
-                }}
               />
             </motion.div>
 
             {/* Cinematic Center Glow */}
             <motion.div
-              className="absolute inset-0 m-auto w-12 h-12 bg-[#D4A017] rounded-full blur-[30px] opacity-20 z-0"
-              animate={{ scale: [1, 1.5, 1], opacity: [0.1, 0.3, 0.1] }}
+              className="absolute inset-0 m-auto w-16 h-16 bg-[#D4A017] rounded-full blur-[40px] opacity-10 z-0"
+              animate={{ scale: [1, 1.2, 1], opacity: [0.05, 0.15, 0.05] }}
               transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
             />
           </motion.div>
@@ -112,9 +92,9 @@ export default function ZLazyLoader({ onAnimationComplete, onZoomStart }: ZLazyL
             className="absolute bottom-12 left-0 right-0 text-center"
             initial={{ opacity: 0, y: 10 }}
             animate={startOutro ? { opacity: 0, y: -10 } : { opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <span className="font-display text-[11px] font-bold tracking-[0.4em] uppercase text-[var(--color-gold)]/70">
+            <span className="font-display text-[10px] font-bold tracking-[0.5em] uppercase text-[var(--color-gold)]/60">
               Dentalist Clinic
             </span>
           </motion.div>
