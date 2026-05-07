@@ -202,6 +202,12 @@
           "Fluoride treatments"
         ]
       }
+    },
+    "CTA": {
+      "Subtitle": "Begin Your Journey",
+      "Title": "Your Dream Smile is One Appointment Away",
+      "Description": "Schedule your complimentary consultation and let Dr. Aouetta Med Saleh design a personalised treatment plan tailored exactly to you.",
+      "BookBtn": "Book Free Consultation"
     }
   },
   "AboutPage": {
@@ -210,28 +216,54 @@
       "Title": "Redefining Dental Care",
       "Description": "Founded by Dr. Aouetta Med Saleh, Dentalist Clinic is where clinical excellence meets artistic vision. We don't just treat teeth; we transform lives."
     },
-    "Stats": {
-      "Exp": "Years Experience",
-      "Smiles": "Smiles Created",
-      "Awards": "Global Awards"
+    "Doctor": {
+      "Name": "Dr. Aouetta M. Saleh",
+      "Role": "Cosmetic Dentist",
+      "Location": "Blida, Algeria",
+      "BioTitle": "A Dedicated Vision for Beautiful Smiles",
+      "BioP1": "Dr. Aouetta Med Saleh is a board-certified cosmetic dentist specializing in advanced smile transformations. As the founder of Dentalist Clinic in Blida, he combines surgical precision with an artist's eye to create results that are as natural as they are spectacular.",
+      "BioP2": "His philosophy is simple: every patient deserves a smile that reflects their best self. From a single veneer to a full mouth reconstruction, every treatment plan is meticulously tailored to the individual.",
+      "Qualifications": "Qualifications",
+      "Credentials": {
+        "specialization_label": "Specialisation",
+        "specialization": "Cosmetic & Aesthetic Dentistry",
+        "location_label": "Location",
+        "location": "Blida, Algeria",
+        "clinic_label": "Clinic",
+        "clinic": "Dentalist Clinic"
+      },
+      "Stats": {
+        "years": "Years Experience",
+        "smiles": "Smiles Created",
+        "awards": "Awards Won"
+      }
     },
     "Philosophy": {
-      "Title": "Our Philosophy",
-      "Description": "We believe that dentistry should be as comfortable as it is effective. Our approach combines a luxury spa-like environment with the most advanced medical technologies available."
-    },
-    "Values": {
-      "Excellence": {
-        "Title": "Clinical Excellence",
-        "Desc": "We never compromise on quality. Every material and procedure is vetted against the highest global standards."
-      },
-      "Artistry": {
-        "Title": "Artistic Vision",
-        "Desc": "A smile is a work of art. We consider facial symmetry, skin tone, and personality in every transformation."
-      },
-      "Care": {
-        "Title": "Patient-Centric Care",
-        "Desc": "Your comfort is our priority. We offer a bespoke experience tailored to your unique needs and goals."
+      "Subtitle": "Our Vision",
+      "Title": "Where Art Meets Science",
+      "Values": {
+        "artistry": {
+          "title": "Artistic Vision",
+          "desc": "A smile is a work of art. We consider facial symmetry, skin tone, and personality in every transformation."
+        },
+        "pain": {
+          "title": "Pain-Free Experience",
+          "desc": "Using the latest anaesthesia and sedation techniques, we ensure complete comfort throughout every procedure."
+        },
+        "vision": {
+          "title": "Innovative Technology",
+          "desc": "From 3D imaging to digital smile design, we use cutting-edge tools for precise, predictable outcomes."
+        },
+        "results": {
+          "title": "Lasting Results",
+          "desc": "We select only the highest quality materials to ensure your smile remains beautiful and functional for decades."
+        }
       }
+    },
+    "CTA": {
+      "Title": "Start Your Smile Journey Today",
+      "Description": "Schedule your complimentary consultation and let Dr. Aouetta Med Saleh design a personalised treatment plan tailored exactly to you.",
+      "BookBtn": "Book Free Consultation"
     }
   },
   "GalleryPage": {
@@ -240,16 +272,17 @@
       "Title": "The Art of Transformation",
       "Description": "Explore our collection of real patient results. Each image represents a unique journey toward confidence and health."
     },
-    "Filters": {
+    "Categories": {
       "all": "All Cases",
       "veneers": "Veneers",
       "makeover": "Makeovers",
       "whitening": "Whitening",
-      "implants": "Implants"
+      "implants": "Implants",
+      "invisalign": "Invisalign®"
     },
     "Labels": {
-      "Before": "Before",
-      "After": "After"
+      "before": "Before",
+      "after": "After"
     }
   },
   "ContactPage": {

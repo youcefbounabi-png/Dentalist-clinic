@@ -29,6 +29,7 @@ export default function Footer() {
                   src="/images/dentalist-logo.png"
                   alt="Dentalist Clinic Logo"
                   fill
+                  sizes="32px"
                   className="object-contain logo-invert"
                 />
               </div>

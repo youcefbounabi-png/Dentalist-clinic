@@ -64,6 +64,7 @@ export default function Navbar() {
                 src="/images/dentalist-logo.png"
                 alt="Dentalist Clinic Logo"
                 fill
+                sizes="48px"
                 className="object-contain logo-invert"
               />
             </div>

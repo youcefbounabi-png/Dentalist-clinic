@@ -202,36 +202,68 @@
           "Traitements au fluor"
         ]
       }
+    },
+    "CTA": {
+      "Subtitle": "Commencez Votre Voyage",
+      "Title": "Votre Sourire de Rêve est à un Rendez-vous d'Ici",
+      "Description": "Planifiez votre consultation et laissez le Dr Aouetta Med Saleh concevoir un plan de traitement personnalisé spécialement pour vous.",
+      "BookBtn": "Réserver une Consultation Gratuite"
     }
   },
   "AboutPage": {
     "Hero": {
       "Subtitle": "Notre Héritage",
       "Title": "Redéfinir les Soins Dentaires",
-      "Description": "Fondée par le Dr Aouetta Med Saleh, la Clinique Dentalist est le lieu où l'excellence clinique rencontre la vision artistique. Nous ne traitons pas seulement les dents ; nous transformons des lives."
+      "Description": "Fondée par le Dr Aouetta Med Saleh, la Clinique Dentalist est le lieu où l'excellence clinique rencontre la vision artistique. Nous ne traitons pas seulement les dents ; nous transformons des vies."
     },
-    "Stats": {
-      "Exp": "Années d'Expérience",
-      "Smiles": "Sourires Créés",
-      "Awards": "Prix Mondiaux"
+    "Doctor": {
+      "Name": "Dr Aouetta M. Saleh",
+      "Role": "Dentiste Cosmétique",
+      "Location": "Blida, Algérie",
+      "BioTitle": "Une Vision Dédiée à de Beaux Sourires",
+      "BioP1": "Le Dr Aouetta Med Saleh est un dentiste cosmétique certifié spécialisé dans la transformation des sourires. Fondateur de la Clinique Dentalist à Blida, il allie précision chirurgicale et œil d'artiste pour créer des résultats aussi naturels que spectaculaires.",
+      "BioP2": "Sa philosophie est simple : chaque patient mérite un sourire qui reflète sa meilleure version. De la simple facette au relooking complet, chaque plan de traitement est méticuleusement conçu pour chaque individu.",
+      "Qualifications": "Qualifications",
+      "Credentials": {
+        "specialization_label": "Spécialisation",
+        "specialization": "Dentisterie Cosmétique & Esthétique",
+        "location_label": "Lieu",
+        "location": "Blida, Algérie",
+        "clinic_label": "Clinique",
+        "clinic": "Clinique Dentalist"
+      },
+      "Stats": {
+        "years": "Années d'Expérience",
+        "smiles": "Sourires Créés",
+        "awards": "Prix Remportés"
+      }
     },
     "Philosophy": {
-      "Title": "Notre Philosophie",
-      "Description": "Nous croyons que la dentisterie doit être aussi confortable qu'efficace. Notre approche combine un environnement luxueux de type spa avec les technologies médicales les plus avancées disponibles."
-    },
-    "Values": {
-      "Excellence": {
-        "Title": "Excellence Clinique",
-        "Desc": "Nous ne faisons jamais de compromis sur la qualité. Chaque matériau et procédure est vérifié selon les normes mondiales les plus élevées."
-      },
-      "Artistry": {
-        "Title": "Vision Artistique",
-        "Desc": "Un sourire est une œuvre d'art. Nous tenons compte de la symétrie faciale, du teint et de la personnalité dans chaque transformation."
-      },
-      "Care": {
-        "Title": "Soins Centrés sur le Patient",
-        "Desc": "Votre confort est notre priorité. Nous offrons une expérience sur mesure adaptée à vos besoins et objectifs uniques."
+      "Subtitle": "Notre Vision",
+      "Title": "Où l'Art Rencontre la Science",
+      "Values": {
+        "artistry": {
+          "title": "Vision Artistique",
+          "desc": "Un sourire est une œuvre d'art. Nous tenons compte de la symétrie faciale, du teint et de la personnalité dans chaque transformation."
+        },
+        "pain": {
+          "title": "Expérience Sans Douleur",
+          "desc": "En utilisant les dernières techniques d'anesthésie et de sédation, nous garantissons un confort total tout au long de chaque procédure."
+        },
+        "vision": {
+          "title": "Technologie Innovante",
+          "desc": "De l'imagerie 3D à la conception numérique du sourire, nous utilisons des outils de pointe pour des résultats précis et prévisibles."
+        },
+        "results": {
+          "title": "Résultats Durables",
+          "desc": "Nous sélectionnons uniquement des matériaux de la plus haute qualité pour que votre sourire reste beau et fonctionnel pendant des décennies."
+        }
       }
+    },
+    "CTA": {
+      "Title": "Commencez Votre Parcours Sourire Aujourd'hui",
+      "Description": "Planifiez votre consultation et laissez le Dr Aouetta Med Saleh concevoir un plan de traitement personnalisé spécialement pour vous.",
+      "BookBtn": "Réserver une Consultation Gratuite"
     }
   },
   "GalleryPage": {
@@ -240,16 +272,17 @@
       "Title": "L'Art de la Transformation",
       "Description": "Explorez notre collection de résultats réels de patients. Chaque image représente un voyage unique vers la confiance et la santé."
     },
-    "Filters": {
+    "Categories": {
       "all": "Tous les Cas",
       "veneers": "Facettes",
       "makeover": "Relookings",
       "whitening": "Blanchiment",
-      "implants": "Implants"
+      "implants": "Implants",
+      "invisalign": "Invisalign®"
     },
     "Labels": {
-      "Before": "Avant",
-      "After": "Après"
+      "before": "Avant",
+      "after": "Après"
     }
   },
   "ContactPage": {

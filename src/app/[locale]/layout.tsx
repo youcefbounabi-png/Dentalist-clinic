@@ -71,7 +71,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning className={`${cormorant.variable} ${montserrat.variable} scroll-smooth`}>
+    <html lang={locale} suppressHydrationWarning data-scroll-behavior="smooth" className={`${cormorant.variable} ${montserrat.variable} scroll-smooth`}>
       <body suppressHydrationWarning className="antialiased min-h-screen flex flex-col relative transition-colors duration-500 bg-[var(--background)] text-[var(--foreground)]">
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>

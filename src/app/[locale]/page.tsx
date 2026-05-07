@@ -277,6 +277,7 @@ function HomePageMain() {
               src="/media/tooth-line-art-transparent.png"
               alt=""
               fill
+              sizes="100vw"
               className="object-contain object-left scale-[1.5] opacity-60"
             />
           </motion.div>

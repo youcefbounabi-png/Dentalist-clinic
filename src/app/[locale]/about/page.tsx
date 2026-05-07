@@ -94,14 +94,10 @@ export default function AboutPage() {
               <FadeIn delay={0.4}>
                 <div className="space-y-4">
                   <h3 className="font-semibold text-sm uppercase tracking-widest text-[var(--color-charcoal)] mb-6">{t('Doctor.Qualifications')}</h3>
-                  {[
-                    { l: t('Navbar.About'), v: t('Doctor.Credentials.specialization') }, // Using Navbar.About as placeholder for label if needed, but better use direct keys
-                    { l: t('HomePage.Hero.AwardsLocation'), v: t('Doctor.Credentials.location') },
-                    { l: 'Clinic', v: t('Doctor.Credentials.clinic') }
-                  ].map((c, i) => (
+                  {credentials.map((c, i) => (
                     <div key={i} className="grid grid-cols-[120px_1fr] gap-4 py-4 border-t border-black/5">
-                      <span className="text-xs font-bold uppercase tracking-widest text-[var(--color-gold)]">{[t('Doctor.Credentials.specialization_label', {defaultMessage: 'Specialisation'}), t('Doctor.Credentials.location_label', {defaultMessage: 'Location'}), t('Doctor.Credentials.clinic_label', {defaultMessage: 'Clinic'})][i]}</span>
-                      <span className="text-sm text-[var(--color-charcoal-muted)]">{c.v}</span>
+                      <span className="text-xs font-bold uppercase tracking-widest text-[var(--color-gold)]">{c.label}</span>
+                      <span className="text-sm text-[var(--color-charcoal-muted)]">{c.value}</span>
                     </div>
                   ))}
                 </div>
@@ -111,9 +107,9 @@ export default function AboutPage() {
               <FadeIn delay={0.5}>
                 <div className="grid grid-cols-3 gap-4">
                   {[
-                    { n: '18+', l: t('AboutPage.Doctor.Stats.years') },
-                    { n: '500+', l: t('AboutPage.Doctor.Stats.smiles') },
-                    { n: '12', l: t('AboutPage.Doctor.Stats.awards') },
+                    { n: '18+', l: t('Doctor.Stats.years') },
+                    { n: '500+', l: t('Doctor.Stats.smiles') },
+                    { n: '12', l: t('Doctor.Stats.awards') },
                   ].map((s) => (
                     <div key={s.l} className="text-center p-5 rounded-2xl bg-[var(--color-stone-warm)]">
                       <p className="font-display text-3xl font-light text-[var(--color-charcoal)]">{s.n}</p>
