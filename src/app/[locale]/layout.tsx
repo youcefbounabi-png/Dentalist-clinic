@@ -73,7 +73,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning data-scroll-behavior="smooth" className={`${cormorant.variable} ${montserrat.variable} scroll-smooth`}>
       <body suppressHydrationWarning className="antialiased min-h-screen flex flex-col relative transition-colors duration-500 bg-[var(--background)] text-[var(--foreground)]">
-        <ThemeProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange suppressHydrationWarning>
           <NextIntlClientProvider messages={messages}>
             <SmoothScroll>
               <EtherealBackground />
