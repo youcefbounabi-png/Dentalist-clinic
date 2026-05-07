@@ -20,7 +20,11 @@ export default function ParallaxImage({ children, speed = 0.3, className = '' }:
 
   return (
     <div ref={ref} className={`overflow-hidden ${className}`}>
-      <motion.div style={{ y }} className="w-full h-full relative">
+      <motion.div 
+        style={{ y }} 
+        className="w-full h-full relative"
+        initial={false}
+      >
         {children}
       </motion.div>
     </div>

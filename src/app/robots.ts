@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://zarabi-dental-clinic.vercel.app/sitemap.xml',
+    sitemap: 'https://dentalist-clinic.vercel.app/sitemap.xml',
   }
 }

@@ -1,23 +1,27 @@
 {
+  "Metadata": {
+    "Title": "Dentalist Clinic | Premium Cosmetic Dentistry",
+    "Description": "Experience transformative dentistry at Dentalist Clinic. Where art meets dental science. Specialized in veneers, implants, and total smile makeovers."
+  },
   "Navbar": {
     "Home": "Home",
     "Services": "Services",
     "Gallery": "Gallery",
     "About": "About",
     "Contact": "Contact",
-    "BookConsultation": "Book Consultation"
+    "BookConsultation": "Book Appointment"
   },
   "HomePage": {
     "Hero": {
       "Subtitle": "Premium Cosmetic Dentistry",
-      "Title": "Your Most Radiant Smile Begins Here",
-      "Description": "At Zarabi Dental Center, we combine cutting-edge technology with an unwavering eye for aesthetics to craft smiles that are as healthy as they are beautiful.",
+      "Title": "Your Most Beautiful Smile Starts Here",
+      "Description": "At Dentalist Clinic, we combine cutting-edge technology with an unmatched sense of aesthetics to create smiles that are as healthy as they are stunning.",
       "BookBtn": "Book Free Consultation",
       "ViewTransBtn": "View Transformations",
       "FromPatients": "from 500+ patients",
       "SmileTransformations": "Smile Transformations",
-      "TopRatedClinic": "Top-Rated Clinic",
-      "AwardsLocation": "Beverly Hills 2024"
+      "TopRatedClinic": "Top Rated Clinic",
+      "AwardsLocation": "Blida 2024"
     },
     "Services": {
       "SectionSubtitle": "Our Expertise",
@@ -26,67 +30,279 @@
       "Items": {
         "veneers": {
           "title": "Porcelain Veneers",
-          "desc": "Ultra-thin porcelain shells crafted to reshape, resurface, and reveal a flawless new smile."
+          "desc": "Ultra-thin, custom-made porcelain shells that cover the front surface of teeth to instantly improve appearance."
         },
         "implants": {
           "title": "Dental Implants",
-          "desc": "Permanent, natural-looking tooth replacement that preserves bone and restores full function."
+          "desc": "Permanent, natural-looking tooth replacements that restore both function and aesthetics with surgical precision."
         },
         "whitening": {
           "title": "Teeth Whitening",
-          "desc": "Professional-grade whitening that delivers dramatic, lasting results in a single session."
+          "desc": "Professional-grade brightening treatments that remove years of stains and restore your natural radiance."
         },
         "invisalign": {
           "title": "Invisalign®",
-          "desc": "Discreet, removable clear aligners that straighten your teeth without wires or brackets."
+          "desc": "The clear alternative to braces. Straighten your teeth discreetly with custom-made removable aligners."
         },
         "makeover": {
           "title": "Smile Makeover",
-          "desc": "A curated combination of treatments designed to give you your most confident smile."
+          "desc": "A comprehensive combination of treatments designed to achieve your absolute dream smile."
         },
         "general": {
           "title": "Preventive Care",
-          "desc": "Comprehensive hygiene, digital X-rays, and proactive care that keeps your smile healthy for life."
+          "desc": "Thorough cleaning, digital X-rays, and proactive care that keeps your smile healthy for a lifetime."
         }
       }
     },
     "BeforeAfter": {
       "SectionSubtitle": "Real Results",
       "SectionTitle": "The Art of the Perfect Smile",
-      "Description": "Every smile is unique. Our before-and-after gallery showcases the life-changing transformations our patients experience at Zarabi Dental Center.",
+      "Description": "Every smile is unique. Our before & after gallery showcases the life-changing transformations we've achieved for our patients at Dentalist Clinic.",
       "ViewFullGallery": "View Full Gallery"
     },
     "Doctor": {
       "SectionSubtitle": "Meet the Doctor",
       "SectionTitle": "A Vision for Beautiful, Healthy Smiles",
-      "Description1": "Dr. Zarabi is a board-certified cosmetic dentist with over 18 years of transforming smiles. Trained at leading institutions across North America and Europe, he blends surgical precision with an artist's eye to create results that are as natural as they are stunning.",
-      "Description2": "His philosophy is simple: every patient deserves a smile that reflects their best self. From a single veneer to a complete smile makeover, each treatment plan is meticulously crafted for the individual.",
-      "Stat1Label": "Years Experience",
-      "Stat2Label": "Smiles Crafted",
+      "Description1": "Dr. Aouetta Med Saleh is a board-certified cosmetic dentist specializing in advanced smile transformations. As the founder of Dentalist Clinic in Blida, he combines surgical precision with an artist's eye to create results that are as natural as they are spectacular.",
+      "Description2": "His philosophy is simple: every patient deserves a smile that reflects their best self. From a single veneer to a full mouth reconstruction, every treatment plan is meticulously tailored to the individual.",
+      "Stat1Label": "Years Exp.",
+      "Stat2Label": "Smiles Created",
       "Stat3Label": "Awards Won",
       "FullBiography": "Full Biography",
       "BoardCertified": "Board Certified",
-      "DrName": "Dr. A. Zarabi",
-      "DrSubtitle": "M.D.S · 18+ YRS EXP.",
-      "CircularText": "Dr. Zarabi • Aesthetic Master • "
+      "DrName": "Dr. Aouetta M. Saleh",
+      "DrSubtitle": "Cosmetic Dentist · Blida",
+      "CircularText": "Dr. Aouetta • Aesthetic Master • ",
+      "Stat1": "18+",
+      "Stat2": "500+",
+      "Stat3": "12"
     },
     "Testimonials": {
-      "SectionSubtitle": "Patient Stories",
-      "SectionTitle": "Words From Our Patients"
+      "SectionSubtitle": "Patient Experiences",
+      "SectionTitle": "Stories of Transformation",
+      "Items": {
+        "sarah": {
+          "name": "Sarah M.",
+          "treatment": "Porcelain Veneers",
+          "text": "I never thought I would feel this confident about my smile. Dr. Aouetta's artistry is unmatched — every detail was perfected. My veneers look completely natural and I get compliments every single day."
+        },
+        "karim": {
+          "name": "Karim B.",
+          "treatment": "Dental Implants",
+          "text": "After losing a tooth in an accident, I was self-conscious for years. Dr. Aouetta gave me a permanent solution that looks and feels exactly like my natural teeth. The whole experience was painless and the outcome is incredible."
+        },
+        "sofia": {
+          "name": "Sofia M.",
+          "treatment": "Smile Makeover",
+          "text": "The full smile makeover changed my life. Dr. Aouetta took the time to understand exactly what I wanted and delivered something even beyond my expectations. The clinic itself feels like a luxury spa."
+        },
+        "ahmed": {
+          "name": "Ahmed L.",
+          "treatment": "Invisalign®",
+          "text": "Straight teeth at 38 seemed like a dream. With Dentalist's Invisalign program, it took less than a year. The team was supportive at every step and the results are simply stunning."
+        }
+      }
     },
     "CTA": {
       "Subtitle": "Begin Your Journey",
       "Title": "Your Dream Smile is One Appointment Away",
-      "Description": "Schedule your complimentary consultation and let Dr. Zarabi design a personalised treatment plan tailored exactly to you.",
+      "Description": "Schedule your complimentary consultation and let Dr. Aouetta Med Saleh design a personalised treatment plan tailored exactly to you.",
       "BookBtn": "Book Free Consultation",
-      "CallBtn": "Call Us: +1 234 567 890"
+      "CallBtn": "Call Us: 0778 564 665"
+    },
+    "StatCounter": {
+      "Transformations": "Smile Transformations",
+      "Excellence": "Years of Excellence",
+      "Satisfaction": "Patient Satisfaction",
+      "Awards": "Clinic Awards"
+    },
+    "VideoHighlight": {
+      "Subtitle": "The Dentalist Experience",
+      "Title": "Where Beauty is <born>Born</born>",
+      "Description": "Behind every beautiful smile lies work, passion, and precision. Experience the dedication at Dentalist Clinic."
+    }
+  },
+  "ServicesPage": {
+    "Hero": {
+      "Subtitle": "What We Offer",
+      "Title": "Premium Dental Services",
+      "Description": "Every treatment at Dentalist Clinic is performed with an unmatched level of care and precision. Here's how we can help transform your smile."
+    },
+    "Items": {
+      "veneers": {
+        "title": "Porcelain Veneers",
+        "subtitle": "The Gold Standard in Cosmetic Dentistry",
+        "description": "Ultra-thin, custom-crafted porcelain shells are bonded to the front surface of your teeth, instantly correcting chips, cracks, and deep discoloration.",
+        "features": [
+          "Custom shade matching",
+          "Minimal tooth preparation",
+          "Stain-resistant porcelain",
+          "Results in 2 appointments",
+          "15-20 year longevity"
+        ]
+      },
+      "implants": {
+        "title": "Dental Implants",
+        "subtitle": "Permanent Solutions for Missing Teeth",
+        "description": "State-of-the-art titanium roots that provide a secure foundation for natural-looking porcelain crowns, restoring your bite and your confidence.",
+        "features": [
+          "3D guided placement",
+          "Biocompatible materials",
+          "Preserves bone health",
+          "Feels like natural teeth",
+          "Lifetime potential"
+        ]
+      },
+      "whitening": {
+        "title": "Teeth Whitening",
+        "subtitle": "Professional-Grade Brightening",
+        "description": "Advanced laser whitening and take-home systems that remove years of staining from coffee, tea, and age, revealing your brightest smile.",
+        "features": [
+          "Up to 8 shades whiter",
+          "Enamel-safe technology",
+          "Sensitivity protection",
+          "Fast in-office results",
+          "Custom take-home kits"
+        ]
+      },
+      "invisalign": {
+        "title": "Invisalign®",
+        "subtitle": "The Discreet Path to Straighter Teeth",
+        "description": "Virtually invisible clear aligners that gradually shift your teeth into the perfect position without the need for metal braces or wires.",
+        "features": [
+          "Removable for eating",
+          "Nearly invisible",
+          "Comfortable fit",
+          "Predictable results",
+          "Fewer office visits"
+        ]
+      },
+      "makeover": {
+        "title": "Smile Makeover",
+        "subtitle": "A Total Transformation",
+        "description": "A comprehensive, multi-treatment plan designed to achieve your dream smile. We combine veneers, whitening, and more for maximum impact.",
+        "features": [
+          "Digital smile design",
+          "Personalized roadmap",
+          "Holistic aesthetic approach",
+          "Life-changing results",
+          "Expert coordination"
+        ]
+      },
+      "general": {
+        "title": "Preventive Care",
+        "subtitle": "Foundation for a Lifetime of Health",
+        "description": "Regular checkups, professional cleanings, and advanced diagnostics to ensure your smile remains healthy and beautiful for years to come.",
+        "features": [
+          "Digital X-rays",
+          "Deep cleanings",
+          "Oral cancer screening",
+          "Gum health monitoring",
+          "Fluoride treatments"
+        ]
+      }
+    }
+  },
+  "AboutPage": {
+    "Hero": {
+      "Subtitle": "Our Legacy",
+      "Title": "Redefining Dental Care",
+      "Description": "Founded by Dr. Aouetta Med Saleh, Dentalist Clinic is where clinical excellence meets artistic vision. We don't just treat teeth; we transform lives."
+    },
+    "Stats": {
+      "Exp": "Years Experience",
+      "Smiles": "Smiles Created",
+      "Awards": "Global Awards"
+    },
+    "Philosophy": {
+      "Title": "Our Philosophy",
+      "Description": "We believe that dentistry should be as comfortable as it is effective. Our approach combines a luxury spa-like environment with the most advanced medical technologies available."
+    },
+    "Values": {
+      "Excellence": {
+        "Title": "Clinical Excellence",
+        "Desc": "We never compromise on quality. Every material and procedure is vetted against the highest global standards."
+      },
+      "Artistry": {
+        "Title": "Artistic Vision",
+        "Desc": "A smile is a work of art. We consider facial symmetry, skin tone, and personality in every transformation."
+      },
+      "Care": {
+        "Title": "Patient-Centric Care",
+        "Desc": "Your comfort is our priority. We offer a bespoke experience tailored to your unique needs and goals."
+      }
+    }
+  },
+  "GalleryPage": {
+    "Hero": {
+      "Subtitle": "Visual Portfolio",
+      "Title": "The Art of Transformation",
+      "Description": "Explore our collection of real patient results. Each image represents a unique journey toward confidence and health."
+    },
+    "Filters": {
+      "all": "All Cases",
+      "veneers": "Veneers",
+      "makeover": "Makeovers",
+      "whitening": "Whitening",
+      "implants": "Implants"
+    },
+    "Labels": {
+      "Before": "Before",
+      "After": "After"
+    }
+  },
+  "ContactPage": {
+    "Hero": {
+      "Subtitle": "Get In Touch",
+      "Title": "Begin Your Transformation",
+      "Description": "Ready to achieve your dream smile? Contact us today to schedule your personalized consultation."
+    },
+    "Info": {
+      "Location": "Our Location",
+      "Phone": "Phone Number",
+      "Email": "Email Address",
+      "Hours": "Opening Hours",
+      "Days": {
+        "mon_fri": "Monday - Friday",
+        "sat": "Saturday",
+        "sun": "Sunday"
+      },
+      "Times": {
+        "mon_fri": "09:00 AM - 06:00 PM",
+        "sat": "10:00 AM - 04:00 PM",
+        "sun": "Closed"
+      }
+    },
+    "Form": {
+      "Title": "Book a Consultation",
+      "Description": "Fill out the form below and our team will get back to you within 24 hours to confirm your appointment.",
+      "Labels": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "interest": "Interested Service",
+        "message": "Your Message"
+      },
+      "Placeholders": {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "phone": "0555 000 000",
+        "interest": "Select a service",
+        "message": "Tell us about your goals...",
+        "other": "Other / General Enquiry"
+      },
+      "Submit": "Submit Request",
+      "Loading": "Sending...",
+      "SuccessTitle": "Request Sent!",
+      "SuccessDesc": "Thank you for reaching out. We will contact you shortly to confirm your appointment.",
+      "Disclaimer": "Your information is secure and will only be used for appointment scheduling."
     }
   },
   "Footer": {
-    "Description": "Premium cosmetic and restorative dentistry. Where meticulous art meets advanced dental science to create your most confident smile.",
+    "Description": "A premium dental destination where art meets science to create the world's most beautiful smiles. Led by Dr. Aouetta Med Saleh.",
     "QuickLinks": "Quick Links",
     "Services": "Services",
-    "Contact": "Contact",
-    "Rights": "Zarabi Dental Center. All rights reserved."
+    "Contact": "Contact Us",
+    "Rights": "Dentalist Clinic. All rights reserved."
   }
 }

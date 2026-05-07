@@ -1,4 +1,8 @@
 {
+  "Metadata": {
+    "Title": "Clinique Dentalist | Dentisterie Esthétique Premium",
+    "Description": "Découvrez une dentisterie transformatrice à la Clinique Dentalist. Là où l'art rencontre la science dentaire. Spécialisée en facettes, implants et relookings complets du sourire."
+  },
   "Navbar": {
     "Home": "Accueil",
     "Services": "Services",
@@ -11,13 +15,13 @@
     "Hero": {
       "Subtitle": "Dentisterie Esthétique Premium",
       "Title": "Votre Plus Beau Sourire Commence Ici",
-      "Description": "Au Centre Dentaire Zarabi, nous combinons des technologies de pointe avec un sens inégalé de l'esthétique pour créer des sourires aussi sains que magnifiques.",
+      "Description": "À la Clinique Dentalist, nous combinons des technologies de pointe avec un sens inégalé de l'esthétique pour créer des sourires aussi sains que magnifiques.",
       "BookBtn": "Réserver une Consultation Gratuite",
       "ViewTransBtn": "Voir les Transformations",
       "FromPatients": "de plus de 500 patients",
       "SmileTransformations": "Sourires Transformés",
       "TopRatedClinic": "Clinique Mieux Notée",
-      "AwardsLocation": "Beverly Hills 2024"
+      "AwardsLocation": "Blida 2024"
     },
     "Services": {
       "SectionSubtitle": "Notre Expertise",
@@ -26,67 +30,279 @@
       "Items": {
         "veneers": {
           "title": "Facettes en Porcelaine",
-          "desc": "Des coques en porcelaine ultra-fines conçues pour remodeler et révéler un nouveau sourire parfait."
+          "desc": "Des coques en porcelaine ultra-fines fabriquées sur mesure qui recouvrent la surface avant des dents pour améliorer instantanément l'apparence."
         },
         "implants": {
           "title": "Implants Dentaires",
-          "desc": "Un remplacement dentaire permanent et naturel qui préserve l'os et restaure la fonction complète."
+          "desc": "Remplacements de dents permanents et d'aspect naturel qui restaurent à la fois la fonction et l'esthétique avec une précision chirurgicale."
         },
         "whitening": {
           "title": "Blanchiment Dentaire",
-          "desc": "Un blanchiment professionnel qui offre des résultats spectaculaires et durables en une seule séance."
+          "desc": "Traitements de blanchiment de qualité professionnelle qui éliminent des années de taches et restaurent votre éclat naturel."
         },
         "invisalign": {
           "title": "Invisalign®",
-          "desc": "Des gouttières transparentes et amovibles qui alignent vos dents sans fils ni bagues."
+          "desc": "L'alternative invisible aux bagues. Alignez vos dents discrètement avec des gouttières amovibles fabriquées sur mesure."
         },
         "makeover": {
-          "title": "Relooking Complet",
-          "desc": "Une combinaison sur-mesure de traitements conçus pour vous donner votre sourire le plus confiant."
+          "title": "Relooking du Sourire",
+          "desc": "Une combinaison complète de traitements conçus pour obtenir le sourire de vos rêves absolus."
         },
         "general": {
           "title": "Soins Préventifs",
-          "desc": "Une hygiène complète, des radiographies numériques et des soins proactifs qui gardent votre sourire en bonne santé pour la vie."
+          "desc": "Un nettoyage en profondeur, des radiographies numériques et des soins proactifs qui maintiennent votre sourire en bonne santé pour la vie."
         }
       }
     },
     "BeforeAfter": {
       "SectionSubtitle": "Vrais Résultats",
       "SectionTitle": "L'Art du Sourire Parfait",
-      "Description": "Chaque sourire est unique. Notre galerie avant/après présente les transformations qui changent la vie de nos patients au Centre Dentaire Zarabi.",
+      "Description": "Chaque sourire est unique. Notre galerie avant/après présente les transformations qui changent la vie de nos patients à la Clinique Dentalist.",
       "ViewFullGallery": "Voir Toute la Galerie"
     },
     "Doctor": {
       "SectionSubtitle": "Rencontrez le Docteur",
       "SectionTitle": "Une Vision pour des Sourires Beaux et Sains",
-      "Description1": "Le Dr Zarabi est un dentiste cosmétique certifié avec plus de 18 ans d'expérience dans la transformation des sourires. Formé dans des institutions de premier plan en Amérique du Nord et en Europe, il allie précision chirurgicale et œil d'artiste pour créer des résultats aussi naturels que spectaculaires.",
+      "Description1": "Le Dr Aouetta Med Saleh est un dentiste cosmétique certifié spécialisé dans la transformation des sourires. Fondateur de la Clinique Dentalist à Blida, il allie précision chirurgicale et œil d'artiste pour créer des résultats aussi naturels que spectaculaires.",
       "Description2": "Sa philosophie est simple : chaque patient mérite un sourire qui reflète sa meilleure version. De la simple facette au relooking complet, chaque plan de traitement est méticuleusement conçu pour chaque individu.",
       "Stat1Label": "Années d'Exp.",
       "Stat2Label": "Sourires Créés",
       "Stat3Label": "Prix Remportés",
       "FullBiography": "Biographie Complète",
       "BoardCertified": "Certifié",
-      "DrName": "Dr A. Zarabi",
-      "DrSubtitle": "M.D.S · 18+ ANS D'EXP.",
-      "CircularText": "Dr Zarabi • Maître en Esthétique • "
+      "DrName": "Dr Aouetta M. Saleh",
+      "DrSubtitle": "Dentiste Cosmétique · Blida",
+      "CircularText": "Dr Aouetta • Maître en Esthétique • ",
+      "Stat1": "18+",
+      "Stat2": "500+",
+      "Stat3": "12"
     },
     "Testimonials": {
-      "SectionSubtitle": "Histoires de Patients",
-      "SectionTitle": "Les Mots de nos Patients"
+      "SectionSubtitle": "Expériences Patients",
+      "SectionTitle": "Histoires de Transformation",
+      "Items": {
+        "sarah": {
+          "name": "Sarah M.",
+          "treatment": "Facettes en Porcelaine",
+          "text": "Je n'aurais jamais pensé me sentir aussi confiante dans mon sourire. Le sens artistique du Dr Aouetta est inégalé — chaque détail a été perfectionné. Mes facettes ont l'air tout à fait naturelles et je reçois des compliments chaque jour."
+        },
+        "karim": {
+          "name": "Karim B.",
+          "treatment": "Implants Dentaires",
+          "text": "Après avoir perdu une dent dans un accident, j'ai été complexé pendant des années. Le Dr Aouetta m'a donné une solution permanente qui ressemble et se ressent exactement comme mes dents naturelles. Toute l'expérience a été indolore et le résultat est incroyable."
+        },
+        "sofia": {
+          "name": "Sofia M.",
+          "treatment": "Relooking du Sourire",
+          "text": "Le relooking complet de mon sourire a changé ma vie. Le Dr Aouetta a pris le temps de comprendre exactement ce que je voulais et a réalisé quelque chose qui dépasse mes attentes. La clinique elle-même ressemble à un spa de luxe."
+        },
+        "ahmed": {
+          "name": "Ahmed L.",
+          "treatment": "Invisalign®",
+          "text": "Avoir des dents droites à 38 ans semblait être un rêve. Avec le programme Invisalign de Dentalist, cela a pris moins d'un an. L'équipe a été d'un grand soutien à chaque étape et les résultats sont tout simplement époustouflants."
+        }
+      }
     },
     "CTA": {
       "Subtitle": "Commencez Votre Voyage",
       "Title": "Votre Sourire de Rêve est à un Rendez-vous d'Ici",
-      "Description": "Planifiez votre consultation gratuite et laissez le Dr Zarabi concevoir un plan de traitement personnalisé spécialement pour vous.",
+      "Description": "Planifiez votre consultation et laissez le Dr Aouetta Med Saleh concevoir un plan de traitement personnalisé spécialement pour vous.",
       "BookBtn": "Réserver une Consultation Gratuite",
-      "CallBtn": "Appelez-nous : +1 234 567 890"
+      "CallBtn": "Appelez-nous : 0778 564 665"
+    },
+    "StatCounter": {
+      "Transformations": "Sourires Transformés",
+      "Excellence": "Années d'Excellence",
+      "Satisfaction": "Satisfaction Patients",
+      "Awards": "Prix de la Clinique"
+    },
+    "VideoHighlight": {
+      "Subtitle": "L'Expérience Dentalist",
+      "Title": "Où Naît la <born>Beauté</born>",
+      "Description": "Derrière chaque beau sourire se cachent travail, passion et précision. Découvrez le dévouement à la Clinique Dentalist."
+    }
+  },
+  "ServicesPage": {
+    "Hero": {
+      "Subtitle": "Notre Offre",
+      "Title": "Services Dentaires Premium",
+      "Description": "Chaque traitement à la Clinique Dentalist est réalisé avec un niveau de soin et de précision inégalé. Voici comment nous pouvons aider à transformer votre sourire."
+    },
+    "Items": {
+      "veneers": {
+        "title": "Facettes en Porcelaine",
+        "subtitle": "Le Standard d'Or en Dentisterie Esthétique",
+        "description": "Des coques en porcelaine ultra-fines fabriquées sur mesure sont fixées sur la surface avant de vos dents, corrigeant instantanément les éclats, les fissures et les décolorations.",
+        "features": [
+          "Adaptation sur mesure des teintes",
+          "Préparation minimale des dents",
+          "Porcelaine résistante aux taches",
+          "Résultats en 2 rendez-vous",
+          "Longévité de 15 à 20 ans"
+        ]
+      },
+      "implants": {
+        "title": "Implants Dentaires",
+        "subtitle": "Solutions Permanentes pour les Dents Manquantes",
+        "description": "Des racines en titane de pointe qui fournissent une base sûre pour des couronnes en porcelaine d'aspect naturel, restaurant votre occlusion et votre confiance.",
+        "features": [
+          "Placement guidé en 3D",
+          "Matériaux biocompatibles",
+          "Préserve la santé osseuse",
+          "Se ressent comme des dents naturelles",
+          "Potentiel à vie"
+        ]
+      },
+      "whitening": {
+        "title": "Blanchiment Dentaire",
+        "subtitle": "Éclaircissement de Qualité Professionnelle",
+        "description": "Blanchiment laser avancé et systèmes à domicile qui éliminent des années de taches de café, de thé et d'âge, révélant votre sourire le plus éclatant.",
+        "features": [
+          "Jusqu'à 8 teintes plus blanches",
+          "Technologie respectueuse de l'émail",
+          "Protection contre la sensibilité",
+          "Résultats rapides en cabinet",
+          "Kits personnalisés à domicile"
+        ]
+      },
+      "invisalign": {
+        "title": "Invisalign®",
+        "subtitle": "Le Chemin Discret Vers des Dents Plus Droites",
+        "description": "Des gouttières transparentes pratiquement invisibles qui déplacent progressivement vos dents vers la position parfaite sans avoir besoin de bagues ou de fils métalliques.",
+        "features": [
+          "Amovible pour manger",
+          "Presque invisible",
+          "Ajustement confortable",
+          "Résultats prévisibles",
+          "Moins de visites au cabinet"
+        ]
+      },
+      "makeover": {
+        "title": "Relooking du Sourire",
+        "subtitle": "Une Transformation Totale",
+        "description": "Un plan complet de traitements multiples conçu pour obtenir le sourire de vos rêves. Nous combinons facettes, blanchiment et plus encore pour un impact maximal.",
+        "features": [
+          "Conception numérique du sourire",
+          "Feuille de route personnalisée",
+          "Approche esthétique holistique",
+          "Résultats qui changent la vie",
+          "Coordination experte"
+        ]
+      },
+      "general": {
+        "title": "Soins Préventifs",
+        "subtitle": "La Fondation pour une Vie de Santé",
+        "description": "Des examens réguliers, des nettoyages professionnels et des diagnostics avancés pour garantir que votre sourire reste sain et beau pour les années à venir.",
+        "features": [
+          "Radiographies numériques",
+          "Nettoyages en profondeur",
+          "Dépistage du cancer buccal",
+          "Suivi de la santé des gencives",
+          "Traitements au fluor"
+        ]
+      }
+    }
+  },
+  "AboutPage": {
+    "Hero": {
+      "Subtitle": "Notre Héritage",
+      "Title": "Redéfinir les Soins Dentaires",
+      "Description": "Fondée par le Dr Aouetta Med Saleh, la Clinique Dentalist est le lieu où l'excellence clinique rencontre la vision artistique. Nous ne traitons pas seulement les dents ; nous transformons des vies."
+    },
+    "Stats": {
+      "Exp": "Années d'Expérience",
+      "Smiles": "Sourires Créés",
+      "Awards": "Prix Mondiaux"
+    },
+    "Philosophy": {
+      "Title": "Notre Philosophie",
+      "Description": "Nous croyons que la dentisterie doit être aussi confortable qu'efficace. Notre approche combine un environnement luxueux de type spa avec les technologies médicales les plus avancées disponibles."
+    },
+    "Values": {
+      "Excellence": {
+        "Title": "Excellence Clinique",
+        "Desc": "Nous ne faisons jamais de compromis sur la qualité. Chaque matériau et procédure est vérifié selon les normes mondiales les plus élevées."
+      },
+      "Artistry": {
+        "Title": "Vision Artistique",
+        "Desc": "Un sourire est une œuvre d'art. Nous tenons compte de la symétrie faciale, du teint et de la personnalité dans chaque transformation."
+      },
+      "Care": {
+        "Title": "Soins Centrés sur le Patient",
+        "Desc": "Votre confort est notre priorité. Nous offrons une expérience sur mesure adaptée à vos besoins et objectifs uniques."
+      }
+    }
+  },
+  "GalleryPage": {
+    "Hero": {
+      "Subtitle": "Portfolio Visuel",
+      "Title": "L'Art de la Transformation",
+      "Description": "Explorez notre collection de résultats réels de patients. Chaque image représente un voyage unique vers la confiance et la santé."
+    },
+    "Filters": {
+      "all": "Tous les Cas",
+      "veneers": "Facettes",
+      "makeover": "Relookings",
+      "whitening": "Blanchiment",
+      "implants": "Implants"
+    },
+    "Labels": {
+      "Before": "Avant",
+      "After": "Après"
+    }
+  },
+  "ContactPage": {
+    "Hero": {
+      "Subtitle": "Contactez-nous",
+      "Title": "Commencez Votre Transformation",
+      "Description": "Prêt à obtenir le sourire de vos rêves ? Contactez-nous dès aujourd'hui pour planifier votre consultation personnalisée."
+    },
+    "Info": {
+      "Location": "Notre Emplacement",
+      "Phone": "Numéro de Téléphone",
+      "Email": "Adresse E-mail",
+      "Hours": "Heures d'Ouverture",
+      "Days": {
+        "mon_fri": "Lundi - Vendredi",
+        "sat": "Samedi",
+        "sun": "Dimanche"
+      },
+      "Times": {
+        "mon_fri": "09:00 - 18:00",
+        "sat": "10:00 - 16:00",
+        "sun": "Fermé"
+      }
+    },
+    "Form": {
+      "Title": "Prendre un Rendez-vous",
+      "Description": "Remplissez le formulaire ci-dessous et notre équipe vous recontactera sous 24 heures pour confirmer votre rendez-vous.",
+      "Labels": {
+        "name": "Nom Complet",
+        "email": "Adresse E-mail",
+        "phone": "Numéro de Téléphone",
+        "interest": "Service Intéressé",
+        "message": "Votre Message"
+      },
+      "Placeholders": {
+        "name": "Jean Dupont",
+        "email": "jean@exemple.com",
+        "phone": "0555 000 000",
+        "interest": "Sélectionnez un service",
+        "message": "Parlez-nous de vos objectifs...",
+        "other": "Autre / Demande Générale"
+      },
+      "Submit": "Envoyer la Demande",
+      "Loading": "Envoi en cours...",
+      "SuccessTitle": "Demande Envoyée !",
+      "SuccessDesc": "Merci de nous avoir contactés. Nous vous recontacterons sous peu pour confirmer votre rendez-vous.",
+      "Disclaimer": "Vos informations sont sécurisées et ne seront utilisées que pour la planification de rendez-vous."
     }
   },
   "Footer": {
-    "Description": "Dentisterie esthétique et réparatrice haut de gamme. Où l'art minutieux rencontre la science dentaire avancée pour créer votre sourire le plus confiant.",
-    "QuickLinks": "Liens rapides",
+    "Description": "Une destination dentaire premium où l'art rencontre la science pour créer les plus beaux sourires du monde. Dirigée par le Dr Aouetta Med Saleh.",
+    "QuickLinks": "Liens Rapides",
     "Services": "Services",
-    "Contact": "Contact",
-    "Rights": "Centre Dentaire Zarabi. Tous droits réservés."
+    "Contact": "Contactez-nous",
+    "Rights": "Clinique Dentalist. Tous droits réservés."
   }
 }

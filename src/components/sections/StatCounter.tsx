@@ -2,13 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react';
 import { useInView } from 'framer-motion';
-
-const STATS = [
-  { value: 500, suffix: '+', label: 'Smile Transformations' },
-  { value: 18, suffix: '+', label: 'Years of Excellence' },
-  { value: 99, suffix: '%', label: 'Patient Satisfaction' },
-  { value: 12, suffix: '', label: 'Clinic Awards' },
-];
+import { useTranslations } from 'next-intl';
 
 function Counter({ value, suffix }: { value: number; suffix: string }) {
   const [count, setCount] = useState(0);
@@ -23,7 +17,6 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
     const tick = (now: number) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      // easeOutExpo
       const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
       start = Math.round(eased * value);
       setCount(start);
@@ -36,9 +29,18 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 }
 
 export default function StatCounter() {
+  const t = useTranslations('HomePage.StatCounter');
+
+  const stats = [
+    { value: 500, suffix: '+', label: t('Transformations') },
+    { value: 18, suffix: '+', label: t('Excellence') },
+    { value: 99, suffix: '%', label: t('Satisfaction') },
+    { value: 12, suffix: '', label: t('Awards') },
+  ];
+
   return (
     <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8">
-      {STATS.map((stat) => (
+      {stats.map((stat) => (
         <div key={stat.label} className="text-center">
           <p className="font-display text-4xl md:text-5xl font-light text-[var(--color-charcoal)] mb-2">
             <Counter value={stat.value} suffix={stat.suffix} />

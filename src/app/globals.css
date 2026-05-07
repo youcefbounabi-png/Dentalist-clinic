@@ -146,6 +146,8 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
   position: relative;
   overflow: hidden;
+  contain: layout style;
+  isolation: isolate;
 }
 
 .splash-gallery-container {
@@ -165,6 +167,9 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   background: #ffffff;
   padding: 6px;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .splash-item img {
@@ -174,6 +179,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 38% 62% 68% 32% / 38% 48% 58% 48%;
   transition: transform 0.7s ease;
   animation: morphingInner 10s ease-in-out infinite;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .splash-item:hover {
@@ -236,9 +243,10 @@ h1, h2, h3, h4, h5, h6 {
     cursor: default;
   }
 
-  .splash-item img {
+  .splash-item, .splash-item img {
     animation: none !important;
     transform: none !important;
+    will-change: auto !important;
   }
 
   .splash-item:hover {
@@ -272,4 +280,52 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .logo-blend { mix-blend-mode: multiply; }
+
+/* ============================================================
+   DOCTOR VIDEO — NUCLEAR FIX
+   Eliminates white bars (sub-pixel gaps) and black bars
+   (source video letterboxing) by making the video bleed
+   past all edges. overflow:hidden clips the excess.
+   ============================================================ */
+.doctor-media-wrapper,
+.doctor-media-wrapper *:not(svg):not(text):not(textPath):not(path) {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.doctor-media-wrapper {
+  position: relative;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible; /* badge needs to overlap */
+}
+
+.doctor-media-wrapper .video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 2rem;
+  -webkit-clip-path: inset(0 round 2rem);
+  clip-path: inset(0 round 2rem);
+}
+
+.doctor-media-wrapper .video-container video,
+.doctor-media-wrapper .video-container img {
+  position: absolute;
+  top: -18%;
+  left: -12%;
+  width: 140%;
+  height: 136%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+#doctor-section {
+  background: transparent !important;
+}
 /* Removed dark mode logo inversion */

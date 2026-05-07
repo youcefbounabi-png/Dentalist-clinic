@@ -13,6 +13,7 @@ import GoldenSandBackground from '@/components/ui/GoldenSandBackground';
 import SplashTransformations from '@/components/sections/SplashTransformations';
 import { useTranslations } from 'next-intl';
 import ZLazyLoader from '@/components/ui/ZLazyLoader';
+import VideoHighlightSection from '@/components/sections/VideoHighlightSection';
 
 export default function HomePage() {
   const [loaded, setLoaded] = useState(false);
@@ -76,7 +77,7 @@ function HomePageMain() {
     offset: ["start end", "end start"]
   });
 
-  const decoY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const decoY = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
   const decoRotate = useTransform(scrollYProgress, [0, 1], [0, 5]);
 
   return (
@@ -157,7 +158,7 @@ function HomePageMain() {
               {/* Doctor photo – normal flow, fills the aspect-ratio box */}
               <ParallaxImage speed={0.1} className="rounded-3xl overflow-hidden w-full h-full">
                 <Image
-                  src="/images/Screenshot 2026-04-06 155601.png"
+                  src="/media/hero-image.png"
                   alt="Dr. Zarabi – Cosmetic Dentist"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -202,6 +203,9 @@ function HomePageMain() {
           </FadeIn>
         </div>
       </section>
+
+      {/* ─── VIDEO HIGHLIGHT ─── */}
+      <VideoHighlightSection />
 
       {/* ─── STATS BAND ─── */}
       <section className="border-y border-black/5 bg-[var(--color-stone-warm)] py-12">
@@ -256,33 +260,29 @@ function HomePageMain() {
 
       {/* ─── BEFORE / AFTER ─── */}
       <section ref={decoRef} className="py-32 bg-[var(--color-stone-warm)] relative overflow-hidden">
-        {/* Artistic Backdrop Element (Left Side) */}
-        <motion.div 
-          style={{ y: decoY }}
-          className="absolute left-0 top-0 bottom-0 w-1/3 opacity-[0.05] pointer-events-none select-none overflow-hidden"
+        <div 
+          className="absolute left-0 top-0 bottom-0 w-[40%] opacity-12 md:opacity-22 pointer-events-none select-none overflow-hidden"
         >
-          <Image
-            src="/images/gold-deco.jpg"
-            alt=""
-            fill
-            className="object-cover scale-125 grayscale"
-          />
-        </motion.div>
-
-        {/* Floating Side Ornament */}
-        <motion.div 
-          style={{ y: decoY, rotate: decoRotate }}
-          className="absolute left-0 top-1/2 -translate-y-1/2 w-64 h-[120%] opacity-[0.12] pointer-events-none hidden xl:flex items-center justify-start"
-        >
-          <div className="relative w-full h-full">
+          <motion.div 
+            style={{ 
+              y: decoY,
+              WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%), linear-gradient(to right, black 80%, transparent 100%)',
+              maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%), linear-gradient(to right, black 80%, transparent 100%)',
+              WebkitMaskComposite: 'source-in',
+              maskComposite: 'intersect'
+            }}
+            className="absolute -top-[20%] -bottom-[20%] left-0 w-full"
+          >
             <Image
-              src="/images/gold-deco.jpg"
+              src="/media/tooth-line-art-transparent.png"
               alt=""
               fill
-              className="object-contain object-left"
+              className="object-contain object-left scale-[1.5] opacity-60"
             />
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
+
+
 
         <span
           aria-hidden
@@ -327,47 +327,25 @@ function HomePageMain() {
       </section>
 
       {/* ─── DOCTOR INTRO ─── */}
-      <section className="py-32 px-6 relative overflow-hidden">
-        <span
-          aria-hidden
-          className="absolute left-0 top-1/2 -translate-y-1/2 font-display text-[clamp(160px,25vw,350px)] font-bold text-black/[0.03] select-none leading-none pointer-events-none"
-        >
-          04
-        </span>
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid lg:grid-cols-[1fr_1.4fr] gap-20 items-center">
-            <FadeIn direction="right">
-              <div className="relative group perspective-1000">
-                {/* Main Media Container */}
-                <ParallaxImage speed={0.05} className="w-full relative rounded-[2rem] overflow-hidden aspect-[3/4] shadow-2xl transition-all duration-700 group-hover:shadow-[0_20px_50px_rgba(202,138,4,0.15)] ring-1 ring-black/5 dark:ring-white/10">
-                  {/* The Video Core */}
+      <section id="doctor-section" className="py-32 px-6 relative overflow-hidden bg-transparent">
+        <div className="max-w-7xl mx-auto relative z-10 bg-transparent">
+          <div className="grid lg:grid-cols-[1fr_1.4fr] gap-20 items-center bg-transparent">
+            <FadeIn direction="right" className="bg-transparent">
+              <div className="relative group doctor-media-wrapper">
+                {/* Main Media Container - Final Structural Fix */}
+                <div className="video-container">
                   <video 
                     autoPlay 
                     loop 
                     muted 
                     playsInline 
-                    className="absolute inset-0 w-full h-full object-cover object-center grayscale-[30%] group-hover:grayscale-0 transition-all duration-1000 scale-[1.02] group-hover:scale-105"
                   >
-                    <source src="/videos/doctor-video.mp4" type="video/mp4" />
+                    <source src="/videos/dr-aouetta-intro.mp4" type="video/mp4" />
                   </video>
+                </div>
 
-                  {/* Abstract Art Overlay */}
-                  <div className="absolute inset-0 z-10 pointer-events-none mix-blend-overlay dark:mix-blend-soft-light opacity-60 group-hover:opacity-30 transition-opacity duration-1000">
-                    <Image
-                      src="/images/doctor-art.png"
-                      alt="Artistic Aura"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 45vw"
-                      className="object-cover object-center scale-110 -translate-x-2 group-hover:translate-x-0 transition-transform duration-[2s] ease-out grayscale"
-                    />
-                  </div>
-
-                  {/* Elegant Gradient Tint for text contrast and premium feel */}
-                  <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-                </ParallaxImage>
-
-                {/* Circular Spinning Typographical Badge */}
-                <div className="absolute -left-6 -top-6 w-[120px] h-[120px] hidden md:block z-30 drop-shadow-xl pointer-events-none">
+                {/* Circular Spinning Badge - Positioned half-in, half-out on the corner */}
+                <div className="absolute -left-8 -top-8 w-[130px] h-[130px] hidden md:block z-30 drop-shadow-2xl pointer-events-none">
                   {/* Rotating Text */}
                   <div className="w-full h-full animate-[spin_12s_linear_infinite]">
                     <svg viewBox="0 0 100 100" className="w-full h-full overflow-visible">
@@ -376,7 +354,7 @@ function HomePageMain() {
                         d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"
                         fill="none"
                       />
-                      <text className="font-display text-[15px] font-bold tracking-[0.2em] fill-[var(--color-gold)] uppercase drop-shadow-sm">
+                      <text className="font-display text-[14px] font-bold tracking-[0.2em] fill-[var(--color-gold)] uppercase">
                         <textPath href="#circularText" startOffset="0%">
                           {t('Doctor.CircularText')}
                         </textPath>
@@ -384,18 +362,7 @@ function HomePageMain() {
                     </svg>
                   </div>
                   {/* Inner Static Jewel */}
-                  <div className="absolute inset-0 m-auto w-4 h-4 rounded-full bg-[var(--color-gold)]/80 blur-[2px] shadow-[0_0_15px_var(--color-gold)]" />
-                </div>
-
-                {/* Floating Credential Card (Redesigned) */}
-                <div className="absolute -bottom-8 -right-4 md:-right-8 glass rounded-2xl p-6 shadow-2xl min-w-[240px] z-30 transition-all duration-700 ease-out group-hover:-translate-y-2 group-hover:border-[var(--color-gold)]/30 backdrop-blur-md">
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)] animate-pulse" />
-                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--color-gold)]">{t('Doctor.BoardCertified')}</p>
-                  </div>
-                  <p className="font-display text-2xl font-semibold text-[var(--color-charcoal)] leading-tight mb-1">{t('Doctor.DrName')}</p>
-                  <div className="w-full h-px bg-black/5 dark:bg-white/5 my-3" />
-                  <p className="text-xs text-[var(--color-charcoal-muted)] font-medium tracking-wide">{t('Doctor.DrSubtitle')}</p>
+                  <div className="absolute inset-0 m-auto w-4 h-4 rounded-full bg-[var(--color-gold)]/80 blur-[1px] shadow-[0_0_20px_var(--color-gold)]" />
                 </div>
               </div>
             </FadeIn>

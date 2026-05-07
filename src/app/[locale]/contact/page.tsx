@@ -5,25 +5,27 @@ import type { FormEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import FadeIn from '@/components/ui/FadeIn';
 import TextReveal from '@/components/ui/TextReveal';
-
-const SERVICES_LIST = [
-  'Porcelain Veneers',
-  'Dental Implants',
-  'Teeth Whitening',
-  'Invisalign®',
-  'Smile Makeover',
-  'Preventive Care',
-  'Other / General Enquiry',
-];
+import { useTranslations } from 'next-intl';
 
 function ContactForm() {
+  const t = useTranslations('ContactPage.Form');
+  const tServices = useTranslations('ServicesPage.Items');
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const servicesList = [
+    tServices('veneers.title'),
+    tServices('implants.title'),
+    tServices('whitening.title'),
+    tServices('invisalign.title'),
+    tServices('makeover.title'),
+    tServices('general.title'),
+    t('Placeholders.other', { defaultMessage: 'Other / General Enquiry' }),
+  ];
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate submit delay (replace with real backend / Formspree / EmailJS)
     await new Promise((r) => setTimeout(r, 1200));
     setLoading(false);
     setSubmitted(true);
@@ -43,8 +45,8 @@ function ContactForm() {
               <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-          <h3 className="font-display text-3xl font-light text-[var(--color-charcoal)] mb-3">Consultation Requested!</h3>
-          <p className="text-[var(--color-charcoal-muted)]">We'll be in touch within 24 hours to confirm your appointment.</p>
+          <h3 className="font-display text-3xl font-light text-[var(--color-charcoal)] mb-3">{t('SuccessTitle')}</h3>
+          <p className="text-[var(--color-charcoal-muted)]">{t('SuccessDesc')}</p>
         </motion.div>
       ) : (
         <motion.form
@@ -56,9 +58,9 @@ function ContactForm() {
         >
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { id: 'name', label: 'Full Name', type: 'text', placeholder: 'Jane Smith' },
-              { id: 'email', label: 'Email Address', type: 'email', placeholder: 'jane@example.com' },
-              { id: 'phone', label: 'Phone Number', type: 'tel', placeholder: '+1 (555) 000-0000' },
+              { id: 'name', label: t('Labels.name'), type: 'text', placeholder: t('Placeholders.name') },
+              { id: 'email', label: t('Labels.email'), type: 'email', placeholder: t('Placeholders.email') },
+              { id: 'phone', label: t('Labels.phone'), type: 'tel', placeholder: t('Placeholders.phone') },
             ].map((field) => (
               <div key={field.id} className={field.id === 'phone' ? 'md:col-span-2' : ''}>
                 <label htmlFor={field.id} className="block text-xs font-semibold uppercase tracking-widest text-[var(--color-charcoal)] mb-2">
@@ -77,26 +79,26 @@ function ContactForm() {
 
           <div>
             <label htmlFor="service" className="block text-xs font-semibold uppercase tracking-widest text-[var(--color-charcoal)] mb-2">
-              Interested In
+              {t('Labels.interest')}
             </label>
             <select
               id="service"
               required
               className="w-full px-5 py-4 rounded-xl bg-[var(--color-stone-warm)] border border-transparent focus:border-[var(--color-gold)] focus:outline-none transition-colors text-[var(--color-charcoal)] text-sm appearance-none cursor-pointer"
             >
-              <option value="">Select a treatment…</option>
-              {SERVICES_LIST.map((s) => <option key={s} value={s}>{s}</option>)}
+              <option value="">{t('Placeholders.interest')}</option>
+              {servicesList.map((s) => <option key={s} value={s}>{s}</option>)}
             </select>
           </div>
 
           <div>
             <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-widest text-[var(--color-charcoal)] mb-2">
-              Your Message (Optional)
+              {t('Labels.message')}
             </label>
             <textarea
               id="message"
               rows={5}
-              placeholder="Tell us about your smile goals…"
+              placeholder={t('Placeholders.message')}
               className="w-full px-5 py-4 rounded-xl bg-[var(--color-stone-warm)] border border-transparent focus:border-[var(--color-gold)] focus:outline-none transition-colors text-[var(--color-charcoal)] placeholder:text-[var(--color-charcoal-muted)]/50 text-sm resize-none"
             />
           </div>
@@ -106,9 +108,9 @@ function ContactForm() {
             disabled={loading}
             className="w-full py-5 bg-[var(--color-charcoal)] text-[var(--button-text-primary)] font-semibold rounded-full hover:bg-[var(--color-gold)] transition-all duration-500 hover:shadow-[0_8px_30px_rgba(202,138,4,0.3)] disabled:opacity-60 disabled:cursor-not-allowed text-sm tracking-wide"
           >
-            {loading ? 'Sending…' : 'Request Free Consultation →'}
+            {loading ? t('Loading') : t('Submit')}
           </button>
-          <p className="text-xs text-center text-[var(--color-charcoal-muted)]">No commitment required. We respond within 24 hours.</p>
+          <p className="text-xs text-center text-[var(--color-charcoal-muted)]">{t('Disclaimer')}</p>
         </motion.form>
       )}
     </AnimatePresence>
@@ -116,6 +118,8 @@ function ContactForm() {
 }
 
 export default function ContactPage() {
+  const t = useTranslations('ContactPage');
+  
   return (
     <>
       {/* ─── HERO ─── */}
@@ -125,10 +129,10 @@ export default function ContactPage() {
           <FadeIn>
             <div className="flex items-center gap-3 mb-8">
               <div className="w-8 h-px bg-[var(--color-gold)]" />
-              <span className="text-xs font-semibold tracking-[0.3em] uppercase text-[var(--color-charcoal-muted)]">Get In Touch</span>
+              <span className="text-xs font-semibold tracking-[0.3em] uppercase text-[var(--color-charcoal-muted)]">{t('Hero.Subtitle')}</span>
             </div>
           </FadeIn>
-          <TextReveal text="Let's Start Your Smile Journey" tag="h1" className="font-display text-[clamp(3rem,7vw,5.5rem)] font-light leading-[1.0] text-[var(--color-charcoal)] max-w-3xl mb-8" />
+          <TextReveal text={t('Hero.Title')} tag="h1" className="font-display text-[clamp(3rem,7vw,5.5rem)] font-light leading-[1.0] text-[var(--color-charcoal)] max-w-3xl mb-8" />
         </div>
       </section>
 
@@ -139,29 +143,29 @@ export default function ContactPage() {
           <FadeIn direction="right" className="space-y-6 sticky top-32">
             <div className="rounded-3xl bg-[var(--color-stone-warm)] p-8 md:p-10 space-y-8">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-gold)] mb-4">Location</p>
-                <p className="font-display text-xl font-light text-[var(--color-charcoal)]">123 Medical Boulevard</p>
-                <p className="text-[var(--color-charcoal-muted)]">Beverly Hills, CA 90210</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-gold)] mb-4">{t('Info.Location')}</p>
+                <p className="font-display text-xl font-light text-[var(--color-charcoal)]">Boulevard Mohamed Boudiaf N° 26</p>
+                <p className="text-[var(--color-charcoal-muted)]">Blida, Algeria</p>
               </div>
               <div className="h-px bg-black/5" />
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-gold)] mb-2">Phone</p>
-                  <a href="tel:+12345678900" className="font-medium text-[var(--color-charcoal)] hover:text-[var(--color-gold)] transition-colors text-sm">+1 (234) 567-890</a>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-gold)] mb-2">{t('Info.Phone')}</p>
+                  <a href="tel:0778564665" className="font-medium text-[var(--color-charcoal)] hover:text-[var(--color-gold)] transition-colors text-sm">0778 564 665 / 0562 927 954</a>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-gold)] mb-2">Email</p>
-                  <a href="mailto:hello@zarabidental.com" className="font-medium text-[var(--color-charcoal)] hover:text-[var(--color-gold)] transition-colors text-sm break-all">hello@zarabidental.com</a>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-gold)] mb-2">{t('Info.Email')}</p>
+                  <a href="mailto:contact@dentalistclinic.com" className="font-medium text-[var(--color-charcoal)] hover:text-[var(--color-gold)] transition-colors text-sm break-all">contact@dentalistclinic.com</a>
                 </div>
               </div>
               <div className="h-px bg-black/5" />
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-gold)] mb-4">Opening Hours</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-gold)] mb-4">{t('Info.Hours')}</p>
                 <div className="space-y-2 text-sm">
                   {[
-                    { d: 'Monday – Friday', h: '9:00 AM – 6:00 PM' },
-                    { d: 'Saturday', h: '9:00 AM – 2:00 PM' },
-                    { d: 'Sunday', h: 'Closed' },
+                    { d: t('Info.Days.mon_fri'), h: t('Info.Times.mon_fri') },
+                    { d: t('Info.Days.sat'), h: t('Info.Times.sat') },
+                    { d: t('Info.Days.sun'), h: t('Info.Times.sun') },
                   ].map((row) => (
                     <div key={row.d} className="flex justify-between text-[var(--color-charcoal-muted)]">
                       <span>{row.d}</span>
@@ -172,26 +176,31 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Map embed */}
-            <div className="rounded-3xl overflow-hidden aspect-video border border-black/5">
-              <iframe
-                title="Zarabi Dental Center Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.5!2d-118.4003563!3d34.0736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDA0JzI1LjAiTiAxMTjCsDI0JzAxLjMiVw!5e0!3m2!1sen!2sus!4v1617000000000!5m2!1sen!2sus"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+            {/* Video embed */}
+            <div className="rounded-3xl overflow-hidden aspect-[4/5] border border-black/5 relative group bg-black">
+              <video
+                src="/media/promo-video-2.mp4"
+                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                autoPlay
+                muted
+                loop
+                playsInline
               />
+              <div className="absolute inset-0 pointer-events-none rounded-3xl shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)]" />
+              <div className="absolute bottom-4 left-4 right-4 bg-black/50 backdrop-blur-md rounded-xl p-3 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-xs font-semibold text-center flex items-center justify-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Boulevard Mohamed Boudiaf N° 26
+                </p>
+              </div>
             </div>
           </FadeIn>
 
           {/* Right: Form */}
           <FadeIn delay={0.2}>
             <div className="bg-white rounded-3xl p-8 md:p-12 border border-black/5 shadow-sm">
-              <h2 className="font-display text-3xl font-light text-[var(--color-charcoal)] mb-2">Book a Free Consultation</h2>
-              <p className="text-sm text-[var(--color-charcoal-muted)] mb-8">Fill in your details below and we'll confirm a time that works for you.</p>
+              <h2 className="font-display text-3xl font-light text-[var(--color-charcoal)] mb-2">{t('Form.Title')}</h2>
+              <p className="text-sm text-[var(--color-charcoal-muted)] mb-8">{t('Form.Description')}</p>
               <ContactForm />
             </div>
           </FadeIn>

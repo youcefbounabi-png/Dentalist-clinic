@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://zarabi-dental-clinic.vercel.app'
+  const baseUrl = 'https://dentalist-clinic.vercel.app'
   const locales = ['en', 'fr'] // Supported locales
   const pages = ['', '/services', '/gallery', '/about', '/contact']
  

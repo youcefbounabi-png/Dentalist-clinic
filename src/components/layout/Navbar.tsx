@@ -59,18 +59,17 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="transition-transform duration-300 group-hover:scale-105">
+            <div className="transition-transform duration-300 group-hover:scale-105 relative w-12 h-12">
               <Image 
-                src="/images/449455925_977747057468189_1434526537659370180_n.jpg"
-                alt="Zarabi Dental Center Logo"
-                width={44}
-                height={44}
-                className="rounded-sm object-contain logo-blend"
+                src="/images/dentalist-logo.png"
+                alt="Dentalist Clinic Logo"
+                fill
+                className="object-contain dark:invert"
               />
             </div>
             <div className="flex flex-col">
               <span className="font-display font-semibold text-xl tracking-[0.15em] text-[var(--color-charcoal)] leading-none">
-                ZARABI
+                DENTALIST
               </span>
               <span className="font-body font-medium text-[0.55rem] tracking-[0.2em] text-[var(--color-charcoal-muted)] uppercase mt-1 hidden md:block">
                 Dental Center

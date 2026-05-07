@@ -6,22 +6,31 @@ import { motion, AnimatePresence } from 'framer-motion';
 import FadeIn from '@/components/ui/FadeIn';
 import TextReveal from '@/components/ui/TextReveal';
 import BeforeAfterSlider from '@/components/sections/BeforeAfterSlider';
-
-const CATEGORIES = ['All', 'Veneers', 'Implants', 'Whitening', 'Invisalign'];
-
-const GALLERY_ITEMS = [
-  { id: 1, cat: 'Veneers', before: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=80', after: 'https://images.unsplash.com/photo-1595956553066-fe24a8c33395?w=800&q=80', label: 'Full Smile Veneer Set' },
-  { id: 2, cat: 'Whitening', before: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80', after: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80', label: 'In-Chair Whitening' },
-  { id: 3, cat: 'Implants', before: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=80', after: 'https://images.unsplash.com/photo-1595956553066-fe24a8c33395?w=800&q=80', label: 'Single Tooth Implant' },
-  { id: 4, cat: 'Invisalign', before: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80', after: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=80', label: 'Invisalign Alignment' },
-  { id: 5, cat: 'Veneers', before: 'https://images.unsplash.com/photo-1595956553066-fe24a8c33395?w=800&q=80', after: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80', label: 'Composite Veneers' },
-  { id: 6, cat: 'Whitening', before: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80', after: 'https://images.unsplash.com/photo-1595956553066-fe24a8c33395?w=800&q=80', label: 'Take-Home Whitening' },
-];
+import { useTranslations } from 'next-intl';
 
 export default function GalleryPage() {
-  const [activeCategory, setActiveCategory] = useState('All');
+  const t = useTranslations('GalleryPage');
+  const tHome = useTranslations('HomePage.Services.Items'); // Reusing category names from home services
+  
+  const categories = [
+    { id: 'all', label: t('Categories.all') },
+    { id: 'veneers', label: t('Categories.veneers') },
+    { id: 'implants', label: t('Categories.implants') },
+    { id: 'whitening', label: t('Categories.whitening') },
+    { id: 'invisalign', label: t('Categories.invisalign') },
+  ];
 
-  const filtered = activeCategory === 'All' ? GALLERY_ITEMS : GALLERY_ITEMS.filter(i => i.cat === activeCategory);
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  const galleryItems = [
+    { id: 1, catId: 'makeover', before: '/images/slider-before.png', after: '/images/slider-after.png', label: 'Complete Transformation', className: 'aspect-[2/1]' },
+    { id: 2, catId: 'veneers', before: '/media/slider-1-before.png', after: '/media/slider-1-after.png', label: 'Porcelain Veneers', className: 'aspect-[2/1]' },
+    { id: 3, catId: 'implants', before: '/media/slider-2-before.png', after: '/media/slider-2-after.png', label: 'Dental Implants', className: 'aspect-[2/1]' },
+    { id: 4, catId: 'whitening', before: '/media/slider-3-before.png', after: '/media/slider-3-after.png', label: 'Professional Whitening', className: 'aspect-[2/1]' },
+    { id: 5, catId: 'makeover', before: '/media/slider-4-before.png', after: '/media/slider-4-after.png', label: 'Full Arch Restoration', className: 'aspect-[2/1]' },
+  ];
+
+  const filtered = activeCategory === 'all' ? galleryItems : galleryItems.filter(i => i.catId === activeCategory);
 
   return (
     <>
@@ -32,13 +41,13 @@ export default function GalleryPage() {
           <FadeIn>
             <div className="flex items-center gap-3 mb-8">
               <div className="w-8 h-px bg-[var(--color-gold)]" />
-              <span className="text-xs font-semibold tracking-[0.3em] uppercase text-[var(--color-charcoal-muted)]">Transformations</span>
+              <span className="text-xs font-semibold tracking-[0.3em] uppercase text-[var(--color-charcoal-muted)]">{t('Hero.Subtitle')}</span>
             </div>
           </FadeIn>
-          <TextReveal text="Real Smiles, Real Stories" tag="h1" className="font-display text-[clamp(3rem,7vw,5.5rem)] font-light leading-[1.0] text-[var(--color-charcoal)] max-w-3xl mb-8" />
+          <TextReveal text={t('Hero.Title')} tag="h1" className="font-display text-[clamp(3rem,7vw,5.5rem)] font-light leading-[1.0] text-[var(--color-charcoal)] max-w-3xl mb-8" />
           <FadeIn delay={0.4}>
             <p className="text-[var(--color-charcoal-muted)] max-w-xl leading-relaxed text-lg">
-              Every before-and-after tells a story of renewed confidence. Explore our most recent smile transformations below.
+              {t('Hero.Description')}
             </p>
           </FadeIn>
         </div>
@@ -47,17 +56,17 @@ export default function GalleryPage() {
       {/* ─── FILTERS ─── */}
       <section className="pb-8 px-6 sticky top-24 z-30 bg-[var(--color-stone-light)]/90 backdrop-blur-md">
         <div className="max-w-7xl mx-auto flex gap-2 flex-wrap">
-          {CATEGORIES.map((cat) => (
+          {categories.map((cat) => (
             <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
+              key={cat.id}
+              onClick={() => setActiveCategory(cat.id)}
               className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                activeCategory === cat
+                activeCategory === cat.id
                   ? 'bg-[var(--color-charcoal)] text-[var(--button-text-primary)]'
                   : 'bg-[var(--color-stone-warm)] text-[var(--color-charcoal-muted)] hover:text-[var(--color-charcoal)]'
               }`}
             >
-              {cat}
+              {cat.label}
             </button>
           ))}
         </div>
@@ -81,12 +90,17 @@ export default function GalleryPage() {
                     <BeforeAfterSlider
                       beforeSrc={item.before}
                       afterSrc={item.after}
-                      beforeLabel="Before"
-                      afterLabel="After"
+                      beforeLabel={t('Labels.before')}
+                      afterLabel={t('Labels.after')}
+                      className={item.className}
                     />
                     <div className="p-5">
-                      <p className="text-xs font-bold uppercase tracking-widest text-[var(--color-gold)] mb-1">{item.cat}</p>
-                      <p className="font-display text-lg font-light text-[var(--color-charcoal)]">{item.label}</p>
+                      <p className="text-xs font-bold uppercase tracking-widest text-[var(--color-gold)] mb-1">
+                        {item.catId === 'makeover' ? tHome('makeover.title') : tHome(`${item.catId}.title`)}
+                      </p>
+                      <p className="font-display text-lg font-light text-[var(--color-charcoal)]">
+                        {item.catId === 'makeover' ? tHome('makeover.title') : tHome(`${item.catId}.title`)}
+                      </p>
                     </div>
                   </div>
                 </motion.div>

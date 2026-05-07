@@ -9,6 +9,7 @@ interface BeforeAfterSliderProps {
   afterSrc: string;
   beforeLabel?: string;
   afterLabel?: string;
+  className?: string;
 }
 
 export default function BeforeAfterSlider({
@@ -16,6 +17,7 @@ export default function BeforeAfterSlider({
   afterSrc,
   beforeLabel = 'Before',
   afterLabel = 'After',
+  className = 'aspect-[4/3]',
 }: BeforeAfterSliderProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   
@@ -39,7 +41,7 @@ export default function BeforeAfterSlider({
   return (
     <div
       ref={containerRef}
-      className="relative rounded-2xl overflow-hidden aspect-[4/3] select-none shadow-2xl"
+      className={`relative rounded-2xl overflow-hidden select-none shadow-2xl ${className}`}
       onMouseMove={handleMouseMove}
       onTouchMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
