@@ -159,7 +159,7 @@ function HomePageMain() {
               <ParallaxImage speed={0.1} className="rounded-3xl overflow-hidden w-full h-full">
                 <Image
                   src="/media/hero-image.png"
-                  alt="Dr. Zarabi – Cosmetic Dentist"
+                  alt="Dentalist Clinic – Cosmetic Dentist"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover object-center"

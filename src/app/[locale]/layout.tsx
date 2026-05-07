@@ -54,8 +54,8 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
       images: ['https://dentalist-clinic.vercel.app/images/dr-aouetta-profile.jpg'],
     },
     icons: {
-      icon: '/icon.svg',
-      apple: '/icon.svg',
+      icon: '/icon.png',
+      apple: '/icon.png',
     },
   };
 }
